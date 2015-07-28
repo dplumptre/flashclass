@@ -18,11 +18,7 @@ class WelcomeController extends Controller
     
     
     
-    public function index()
-    {
-        
-        return view('welcome.index');
-    }
+ 
     
      public function signup()
     {     
@@ -33,8 +29,14 @@ class WelcomeController extends Controller
      public function postsignup(Requests\SignupRequest $request)
     {         
 
+/*
+
+this is how you add it to yoyr controller class below
+
+
+*/
              
-        FlashClass::set('alert-danger','UTME requires ( 4 )courses with English inclusive'); 
+        FlashClass::set('alert-danger','there is an error'); 
           
            return redirect('sign-up');
              
