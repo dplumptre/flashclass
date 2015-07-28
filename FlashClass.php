@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Session;
  * 
  * @author Plumptre Ademola <dplumptre@yahoo.com>
  * 
+ * As you can see I am using static functions so you dont have to instanciate just 
+ * straight up, check out read me to know how to you display this on the client side
+ * 
  * 
  * 
  * 
@@ -20,8 +23,14 @@ use Illuminate\Support\Facades\Session;
 class FlashClass {
     
     
-  
-    
+/*
+
+This function set() uses two parameters
+the name of the css class or id 
+the second is the message you want to pass along
+note i am using bootstrap 3
+
+*/    
 public static function  set($css,$message){
     
     Session::flash('message', $message.'!'); 
@@ -30,6 +39,16 @@ public static function  set($css,$message){
 }
     
     
+ 
+ 
+ 
+/*
+
+this function displays the error 
+
+
+
+*/ 
  
 public static function get(){
 
@@ -43,6 +62,35 @@ echo"<div class=\"alert ".Session::get('alert-class')."\">
     
 }
   
+
+
+
+
+/*
+
+This functions displays errors
+for the form you are working on 
+
+normally you will have to ususally write 
+something like this below
+
+foreach( $errors->all() as $message ){
+echo"<div>".$message."</div>";
+}
+echo"</div>";
+ } 
+ 
+ but you wont have to worry about that any more 
+ 
+ because its all here
+
+
+
+
+
+
+*/
+
 
 public static function getFormNotice($errors){
 
