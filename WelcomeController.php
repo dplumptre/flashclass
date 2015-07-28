@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+/*
+include the namespace of the flashclass
 
+*/
 use App\Services\FlashClass as FlashClass;
 
 
@@ -31,7 +34,7 @@ class WelcomeController extends Controller
 
 /*
 
-this is how you add it to yoyr controller class below
+this is how you add it to your controller class below
 
 
 */
