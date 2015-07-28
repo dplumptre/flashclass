@@ -34,6 +34,8 @@ class WelcomeController extends Controller
 
 /*
 
+using request for the form , using laravel 5.1 here
+
 this is how you add it to your controller class below
 
 
